@@ -68,6 +68,8 @@ import 'lazysizes'
     let total_height = $('body').height() - h
     const headTop = (w >= 768) ? '6px' : '4px'
 
+    $("#mountains").css("height","100%");
+
     $(window).on('scroll', function(){
 
         scroll_now = $(window).scrollTop();
@@ -96,7 +98,5 @@ import 'lazysizes'
         // }
 
     })
-
-
 
 }))
