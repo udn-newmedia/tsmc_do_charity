@@ -1,9 +1,4 @@
 html, body {
-    font-size: 16px;
-    line-height: 1.5;
-    font-family: Arial, "微軟正黑體", sans-serif;
-    word-wrap: break-word;
-    text-align: justify;
     background-color: #ffffff;
     /*background-image: url(../assets/bg_point.png);
     background-repeat: repeat;
@@ -15,25 +10,18 @@ img{
 }
 
 #cover{
-    height: 100vh;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(../assets/bg-03.svg);
+    background-position: center bottom;
+    /*background-image: url(../assets/bg-03.svg);*/
+    background-image: url(../assets/index-03.svg);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-h1{
-    font-size: 55px;
-    font-weight: bold;
-    color: #FFFFFF;
-    letter-spacing: 2px;
-    text-shadow: 0px 0px 8px rgba(0%, 0%, 0%, 0.8);
-    line-height: 1.5;
-    margin: 0;
-    z-index: -999;
+#mountains{
+    height: 100vh;
+    background-position: center center;
+    background-image: url(../assets/index-04.svg);    
 }
 
 h2{

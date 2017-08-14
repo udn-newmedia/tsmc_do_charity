@@ -1,8 +1,8 @@
-import './style.css'
-import './style_.css'
 import $ from 'jquery'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import './style.css'
+import './style_.css'
 import 'lazysizes'
 
 ($(document).ready(function(){
@@ -97,6 +97,6 @@ import 'lazysizes'
 
     })
 
-    
+
 
 }))

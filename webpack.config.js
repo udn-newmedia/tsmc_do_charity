@@ -6,7 +6,7 @@ const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
 
 let prod_state = process.env.NODE_ENV==="production"
 
-module.exports = {
+const config = {
     entry: {
         bundle: './src/index.js',
         jquery: ["jquery"],
@@ -95,3 +95,11 @@ module.exports = {
         })
     ]
 }
+
+config.plugins = config.plugins || []
+
+if(!prod_state){
+    config.devtool = "#source-map"
+}
+
+module.exports = config;
