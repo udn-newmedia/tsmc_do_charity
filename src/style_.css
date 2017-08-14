@@ -4,10 +4,10 @@ html, body {
     font-family: Arial, "微軟正黑體", sans-serif;
     word-wrap: break-word;
     text-align: justify;
-    background-color: #fffff;
-    background-image: url(../image/bg_point.png);
+    background-color: #ffffff;
+    /*background-image: url(../assets/bg_point.png);
     background-repeat: repeat;
-    overflow-x:hidden
+    overflow-x:hidden*/
 }
 
 img{
@@ -19,7 +19,7 @@ img{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../image/bg-03.svg);
+    background-image: url(../assets/bg-03.svg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,7 +139,7 @@ footer a {
 }
 .bg{
     background-color: #f1f0dd;
-    background-image: url(../image/bg.jpg);
+    background-image: url(../assets/bg.jpg);
     background-repeat: repeat; 
 }
 .member{
@@ -174,14 +174,14 @@ footer a {
 }
 .news{
     background-color: #f1f0dd;
-    background-image: url(../image/bg.jpg);
+    background-image: url(../assets/bg.jpg);
     background-repeat: repeat;    
 }
 .news_bg {
     background-repeat: repeat-x;
     padding-bottom: 100px;
     background-position: bottom center;
-    background-image: url(../image/news_bg.png);
+    background-image: url(../assets/news_bg.png);
 }
 .news_title{margin-bottom: 90px;}
 .news_title h3 {
@@ -268,7 +268,7 @@ footer a {
 
 .video-contain{
     background-color: #f1f0dd;
-    background-image: url(../image/bg.jpg);
+    background-image: url(../assets/bg.jpg);
     background-repeat: repeat; 
     position: relative;
     padding-top: 100px;
@@ -740,7 +740,7 @@ footer a {
     #share-block-top{
         padding-top: 100px;
         background-color: #f1f0dd;
-        background-image: url(../image/bg.jpg);
+        background-image: url(../assets/bg.jpg);
         background-repeat: repeat;
     }
 

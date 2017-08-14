@@ -34,11 +34,13 @@
     "postcss-import": "^10.0.0",
     "postcss-loader": "^2.0.6",
     "style-loader": "^0.18.2",
-    "webpack": "^3.4.1",
+    "webpack": "^3.5.4",
     "webpack-dev-server": "^2.6.1"
   },
   "dependencies": {
+    "bootstrap": "^4.0.0-beta",
     "jquery": "^3.2.1",
-    "lazysizes": "^4.0.0-rc3"
+    "lazysizes": "^4.0.0-rc3",
+    "popper.js": "^1.11.1"
   }
 }

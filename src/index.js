@@ -1,8 +1,9 @@
-import style_default from './style.css'
-import style from './style_.css'
+import './style.css'
+import './style_.css'
 import $ from 'jquery'
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import 'lazysizes'
-
 
 ($(document).ready(function(){
 
@@ -70,7 +71,7 @@ import 'lazysizes'
     $(window).on('scroll', function(){
 
         scroll_now = $(window).scrollTop();
-        movie1 = scroll_now - $('#movie-1').offset().top + h;
+        // movie1 = scroll_now - $('#movie-1').offset().top + h;
 
         if(scroll_now > h){
             $('#indicator').css('opacity', 1)
@@ -83,17 +84,19 @@ import 'lazysizes'
 
         $('#indicator-bar').css('width', scroll_now/total_height * 100 + '%');
 
-        if(movie1 > h/3 && movie1 < h + 200){
-            if($('#movie-1').get(0).paused == true){
-                moviePlay(1);
-            }
-        }
-        else{
-            if($('#movie-1').get(0).paused == false){
-                moviePause(1)
-            }
-        }
+        // if(movie1 > h/3 && movie1 < h + 200){
+        //     if($('#movie-1').get(0).paused == true){
+        //         moviePlay(1);
+        //     }
+        // }
+        // else{
+        //     if($('#movie-1').get(0).paused == false){
+        //         moviePause(1)
+        //     }
+        // }
 
     })
+
+    
 
 }))

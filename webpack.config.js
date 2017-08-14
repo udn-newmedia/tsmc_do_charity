@@ -19,11 +19,12 @@ module.exports = {
     module:{
         rules: [
             {
-                use: 'babel-loader',
                 test: /\.js$/,
+                use: 'babel-loader',
                 exclude: /node_modules/
             },
             {
+                test: /\.css$/,
                 use: ExtractTextWebpackPlugin.extract({
                     fallback: 'style-loader',
                     use: [
@@ -32,7 +33,6 @@ module.exports = {
                     ],
                     publicPath: '../'
                 }),
-                test: /\.css$/
             },
             {
                 test: /\.(jpg|png|gif|jpeg|svg)$/,
@@ -86,6 +86,12 @@ module.exports = {
         }),
         new ExtractTextWebpackPlugin({
             filename: 'css/[name].[contenthash].css'
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery',
+            Popper: ['popper.js', 'default']
         })
     ]
 }
