@@ -1,0 +1,585 @@
+html, body {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Arial, "微軟正黑體", sans-serif;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+img{
+    width: 100%;
+}
+
+#cover{
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('http://p.udn.com.tw/upf/newmedia/2017_data/20170508_marketing/image/fbcover.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 55px;
+    font-weight: bold;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 8px rgba(0%, 0%, 0%, 0.8);
+    line-height: 1.5;
+    margin: 0;
+}
+
+h2{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 100px 0 25px 0;
+}
+
+h3{
+    margin: 0;
+    font-size: 17px;
+    color: #434242;
+    line-height: 1.5;
+}
+
+h6 {
+    font-size: 17px;
+    color: #434242;
+    font-weight: bold;
+}
+
+p{
+    font-size: 21px;
+    margin: 0;
+}
+
+hr{
+    border: 0;
+    height: 3px;
+    background: #F5DF14;
+    width: 90px;
+    margin: 100px auto 0 auto;
+}
+
+p>br{
+    line-height: 50px;
+}
+
+footer{
+    width: 880px;
+    margin: 80px auto 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid #DCDDDD;
+    border-top-width: 80%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #A3A3A3;
+}
+
+.footer-link{
+    line-height: 1;
+    padding: 0px 10px;
+}
+
+.footer-right-board{
+    border-right: 1px solid #A3A3A3;
+}
+
+#head{
+  position: fixed;
+  background-color : #231815;
+  height: 50px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  transition: top 0.7s ease;
+}
+
+#icon{
+    height: 50px;
+    line-height: 50px;
+}
+
+#icon img{
+    width: 130px;
+    margin-top: -3px;
+}
+
+.container{
+    width: 880px;
+    padding: 0;
+}
+
+.img-contain{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.video-contain{
+    position: relative;
+    padding-top: 100px;
+}
+
+.video-contain video{
+    width: 100%;
+}
+
+.lazy-contain{
+    position: relative;
+}
+
+.lazy-contain:after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 100%;
+    padding-bottom: 56.25%;
+    content: "";
+}
+.lazy-contain > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.img-say{
+    font-size: 17px;
+    color: gray;
+    margin-top: 5px;
+}
+
+.iframe-contain{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.people-contain{
+    margin-top: 50px;   
+    margin-bottom: 50px;
+    padding: 0 50px;
+}
+
+.people-contain img{
+    width: 104.98px;
+    height: 104.98px;
+}
+
+.share-block{
+    padding-top: 100px;
+    height: 40px;
+}
+
+.fb-like-block{
+    float: left;
+}
+
+.line-block{
+    float: left;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top: 1px;
+}
+
+.line-block img{
+    width: initial;
+}
+
+.logo-block{
+    float: right;
+    margin-top: -25px;
+}
+
+.udn-logo{
+    width: 140px;
+    display: inline-block;
+}
+
+.nmd-logo{
+    width: 140px;
+    display: inline-block;
+}
+
+.fb-comment-block{
+    margin-top: 50px;
+}
+
+#editor{
+    font-size: 17px;
+    color: gray;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #DCDDDD;
+}
+
+#report{
+    margin-top: 50px;
+}
+
+#report p{
+    font-size: 16px;
+}
+
+#report a {
+    color: #000000;
+    text-decoration: none;
+}
+
+#report img:hover{
+    opacity: .5;
+    transition: opacity .2s ease;
+}
+
+#report a:hover { 
+    text-decoration: underline;
+}
+    
+#report .col-sm-6 img{
+    width: 208px;
+    height: 146px;
+}
+
+#indicator{
+	height: 6px;
+	top: 0;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+	opacity: 0;
+    transition: opacity 0.7s ease;
+	background-color: #FFFFFF;
+}
+
+#indicator-bar{
+	height: 6px;
+	width: 0;
+	background-color: #AA4444;
+}
+
+.quote-contain{
+    font-family: "新細明體";
+    font-weight: bold;
+    font-size: 32px;
+    color: #888888;
+    min-height: 125px;
+    margin: 50px 0 50px 0;
+    padding: 15px 0;
+    border-top: dotted 1px #606060;
+    border-bottom: dotted 1px #606060;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    min-height: 125px;
+    position: relative;
+}
+
+.quote-ref {
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 767px){
+
+    h1{
+        font-size: 40px;
+        letter-spacing: -1px;
+        padding: 0 30px;
+        text-align: left;
+    }
+
+    h2{
+        font-size: 26px;
+        text-align: left;
+        margin: 64px 0 32px 0;
+    }
+
+    h3{
+        font-size: 16px;
+    }
+
+    p{
+        font-size: 18px;
+        line-height: 32px;
+    }
+
+    p>br{
+        line-height: 10px;
+    }
+
+    hr{
+        margin: 80px auto 0 auto;
+    }
+
+    blockquote{
+        font-size: 26px;
+    }
+
+    blockquote::before{
+        font-size: 30px;
+    }
+
+    blockquote::after{        
+        font-size: 30px;
+    }
+
+    #indicator{
+        height: 4px;
+    }
+
+    #indicator-bar{
+        height: 4px;
+    }
+
+    #menu{
+        position: absolute;
+        right: 7px;
+        font-size: 34px;
+        top: 5px;
+        color: #FFFFFF;
+    }
+
+    #editor{
+        font-size: 16px;
+        padding: 0 0 50px 0;
+    }
+
+    .container{
+        width: calc(100% - 40px);
+        padding: 0;
+    }
+
+    #head{
+        height: 46px;
+    }
+
+    #icon{
+        height: 46px;
+        line-height: 46px;
+        text-align: center;
+    }
+
+    .img-say{
+        font-size: 15px;
+    }
+
+    .people-contain .col-xs-5{
+        padding-right: 0;
+    }
+
+    .share-block{
+        height: auto;
+    }
+
+    .logo-block{
+        float: none;
+        clear: both;
+        margin-top: 50px;
+        margin-left: -8px;
+    }
+
+    #report .col-sm-6{
+        clear: both;
+    }
+
+    .people-contain img{
+        width: 100%;
+        height: auto;
+    }
+
+    #report p {
+        font-size: 16px;
+        float: left;
+        width: 45%;
+        margin-top: 10px;
+    }
+
+    #report .col-sm-6 img {
+        width: auto;
+        height: auto;
+        float: right;
+        width: 50%;
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+
+    #share-block-top{
+        padding-top: 20px;
+    }
+
+    footer{
+        width: calc(100% - 40px);
+        margin-top: 30px;
+    }
+
+    .footer-link{
+        font-size: 14px;
+        padding: 0 6px;
+    }
+
+    .img-contain{
+        margin-top: 64px;
+        margin-bottom: 64px;
+    }
+
+    .video-contain{
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    .video-play{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		font-size: 60px;
+		color: #FFB93E;
+		margin-left: -12.5px;
+    	margin-top: -30px;
+		transition: opacity 0.2s ease;
+		pointer-events: none;
+	}
+	.video-wait{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		font-size: 60px;
+		color: #FFB93E;
+		margin-left: -23.5px;
+    	margin-top: -30px;
+		transition: opacity 0.2s ease;
+		opacity: 0;
+		pointer-events: none;
+	}
+	.volume{
+		color: #9fa0a0;
+		z-index: 999;
+		position: absolute;
+		bottom: -24px;
+    	left: 28px;
+	}
+	.volume-text{
+		position: absolute;
+		left: 47px;
+		bottom: -30px;
+		color: #9fa0a0;
+	}
+	.replay{
+		color: #9fa0a0;
+		z-index: 999;
+		position: absolute;
+		bottom: -26px;
+    	right: 15px;
+    }
+    .progress{
+		height: 4px;
+	}
+	.progress-bar{
+		height: 4px;
+		width: 0;
+		background-color: #FFB93E;
+		transition: width 0.6s linear;
+	}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+
+    h1{
+        font-size: 45px;
+        letter-spacing: -1px;
+        padding: 0 30px;
+        text-align: center;
+        margin-top: -23px;
+    }
+
+    h2{
+        font-size: 30px;
+        text-align: left;
+        margin: 80px 0 25px 0;
+    }
+
+    h3{
+        font-size: 18px;
+    }
+
+    p{
+        font-size: 20px;
+        line-height: 36px;
+    }
+
+    p>br{
+        line-height: 10px;
+    }
+
+    hr{
+        margin: 80px auto 0 auto;
+    }
+
+    blockquote{
+        font-size: 28px;
+    }
+
+    #indicator{
+        height: 6px;
+    }
+
+    #indicator-bar{
+        height: 6px;
+    }
+
+    #editor{
+        font-size: 16px;
+        padding: 0 0 50px 0;
+    }
+
+    .container{
+        width: calc(100% - 200px);
+    }
+
+    #head{
+        height: 46px;
+    }
+
+    #icon{
+        height: 46px;
+        line-height: 46px;
+        text-align: center;
+    }
+
+    .img-say{
+        font-size: 15px;
+    }
+
+    #report .col-sm-6{
+        margin-top: 20px;
+    }
+
+    #report .col-sm-6 img {
+        width: 100%;
+        height: auto;
+    }
+
+    #share-block-top{
+        padding-top: 100px;
+        background-color: #f1f0dd;
+        background-image: url(../image/bg.jpg);
+        background-repeat: repeat;        
+    }
+
+    footer{
+        width: calc(100% - 200px);
+        margin-top: 30px;
+    }
+
+}
