@@ -1,3 +1,9 @@
+import style_default from './style.css'
+import style from './style_.css'
+import $ from 'jquery'
+import 'lazysizes'
+
+
 ($(document).ready(function(){
 
     var progress = []
