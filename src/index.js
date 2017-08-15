@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './style.css'
 import './style_.css'
 import 'lazysizes'
+import { TweenMax, Power2, TimelineLite } from "gsap";
 
 ($(document).ready(function(){
 
@@ -68,10 +69,22 @@ import 'lazysizes'
     let total_height = $('body').height() - h
     const headTop = (w >= 768) ? '6px' : '4px'
 
-    $("#mountains").css("height","100%");
+    //cover page animation
+    if(h/w>9/16){
+        $("#mountains").css("height","90%");
+    }
+
+    $("#cover").css("opacity","1");
+    $("#mountains").css("bottom","0");
+    $("#cover-title").css("opacity","1");
+
+    setTimeout(function(){
+        $("#flag").css("opacity","1");
+        $("#flag").css("padding-top", "5px");
+    },1100);
+
 
     $(window).on('scroll', function(){
-
         scroll_now = $(window).scrollTop();
         // movie1 = scroll_now - $('#movie-1').offset().top + h;
 
@@ -96,6 +109,13 @@ import 'lazysizes'
         //         moviePause(1)
         //     }
         // }
+
+        if($('.popout').length){
+            if(scroll_now > $('.popout').offset().top - 1/3*h){
+                TweenMax.to(".popout", 0.5, {css: {scale: 0.8, opacity: 1}, ease: Strong.easeInOut, yoyo: true, repeat: 1});
+                $('.popout').removeClass('popout');
+            }
+        }
 
     })
 

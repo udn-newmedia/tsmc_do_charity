@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Begin etu Tag -->
-    <script id="etu-recommender" type="text/javascript">
+    <script defer id="etu-recommender" type="text/javascript">
 
         // sLogin=GetCkValue("udnmember");
         var erUrlPrefix='https://rec.udn.com/';
@@ -42,7 +42,7 @@
     </head>
     <body>
         <div id="fb-root"></div>
-		<script>(function(d, s, id) {
+		<script defer>(function(d, s, id) {
 		  var js, fjs = d.getElementsByTagName(s)[0];
 		  if (d.getElementById(id)) return;
 		  js = d.createElement(s); js.id = id;
@@ -55,12 +55,13 @@
 		</div>
         <div id="head">
             <div id="icon">
-                <a href="."><img src="../assets/menu_logo_tsmc.png"></a>
+                <a href="."><img class="lazyload" data-src="../assets/menu_logo_tsmc.png"></a>
             </div>
         </div>
         <div id="cover">
-            <!--<h1>橫越445公里路 工程師變暖男</h1>-->
             <div id="mountains"></div>
+            <img id="flag" class="lazyload" data-src="../assets/index-flag.png" alt="">
+            <div id="cover-title"></div>
         </div>
         <div class="bg">    
             <div id="share-block-top" class="share-block container">
@@ -86,7 +87,7 @@
                 </div>
             </div>
             <div class="img-contain container">
-                    <img class="lazyload" data-src="../assets/ourstory-01.svg">
+                    <img class="popout lazyload" data-src="../assets/ourstory-01.svg">
             </div>       
             <div class="content container">
                 <h2>一句話講清楚 為何這事值得關注！</h2>
@@ -187,7 +188,7 @@
                 
             </div>                            
         </div>
-        <div class="news">
+        <!--<div class="news">
             <div class="news_bg">
                 <div class="content container">
                     <div class="img-contain container_title">
@@ -247,7 +248,7 @@
                     </div>
                 </div>  
             </div>
-        </div>
+        </div>-->
         <div class="comment">
             <div class="share-block container">
                 <div class="fb-like-block">
