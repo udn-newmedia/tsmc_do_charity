@@ -23,6 +23,10 @@ img{
     transition-timing-function: linear;
 }
 
+#share-block-top{
+    margin-top: 0;
+}
+
 #mountains{
     position: absolute; 
     bottom: -80%; 
@@ -293,20 +297,14 @@ footer a {
     -o-transform:rotate(7deg);  /* Opera */
 }
 
-.video-contain{
-    background-color: #f1f0dd;
-    background-image: url(../assets/bg.jpg);
-    background-repeat: repeat; 
-    position: relative;
-    padding-top: 100px;
-}
-
 .video-contain video{
     width: 100%;
 }
-.video-control {
+
+/*.video-control {
     background-color: #d3eeee;
-}
+}*/
+
 .img-thumbnail {
     display: inline-block;
     max-width: 100%;
@@ -480,6 +478,9 @@ footer a {
 }
 
 @media screen and (max-width: 767px){
+    .bg{
+        padding-bottom: 10px;
+    }
 
     h1{
         font-size: 40px;
@@ -621,68 +622,12 @@ footer a {
         margin-top: 64px;
         margin-bottom: 64px;
     }
-
-    .video-contain{
-        padding-top: 64px;
-        padding-bottom: 64px;
-    }
-
-    .video-play{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		font-size: 60px;
-		color: #FFB93E;
-		margin-left: -12.5px;
-    	margin-top: -30px;
-		transition: opacity 0.2s ease;
-		pointer-events: none;
-	}
-	.video-wait{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		font-size: 60px;
-		color: #FFB93E;
-		margin-left: -23.5px;
-    	margin-top: -30px;
-		transition: opacity 0.2s ease;
-		opacity: 0;
-		pointer-events: none;
-	}
-	.volume{
-		color: #9fa0a0;
-		z-index: 999;
-		position: absolute;
-		bottom: -24px;
-    	left: 28px;
-	}
-	.volume-text{
-		position: absolute;
-		left: 47px;
-		bottom: -30px;
-		color: #9fa0a0;
-	}
-	.replay{
-		color: #9fa0a0;
-		z-index: 999;
-		position: absolute;
-		bottom: -26px;
-    	right: 15px;
-    }
-    .progress{
-		height: 4px;
-	}
-	.progress-bar{
-		height: 4px;
-		width: 0;
-		background-color: #FFB93E;
-		transition: width 0.6s linear;
-	}
-
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
+    .bg{
+        padding-bottom: 10px;
+    }
 
     h1{
         font-size: 45px;
@@ -775,5 +720,4 @@ footer a {
         width: calc(100% - 200px);
         margin-top: 30px;
     }
-
 }

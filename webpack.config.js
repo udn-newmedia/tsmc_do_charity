@@ -86,13 +86,13 @@ const config = {
         }),
         new ExtractTextWebpackPlugin({
             filename: 'css/[name].[contenthash].css'
-        }),
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery',
-            'window.jQuery': 'jquery',
-            Popper: ['popper.js', 'default']
         })
+        // new webpack.ProvidePlugin({
+        //     $: 'jquery',
+        //     jQuery: 'jquery',
+        //     'window.jQuery': 'jquery',
+        //     Popper: ['popper.js', 'default']
+        // })
     ]
 }
 
