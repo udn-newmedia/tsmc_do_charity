@@ -260,6 +260,12 @@ footer a {
     background-position: bottom center;
     background-image: url(../assets/news_bg.png);
 }
+
+.news_pic {
+    opacity: 0;
+    will-change: opacity;
+}
+
 .news_title{margin-bottom: 90px;}
 .news_title h3 {
     font-size: 21px;

@@ -238,6 +238,20 @@ import { TweenMax, Power2, TimelineLite } from "gsap";
             }
         } 
 
+        //news picpopout
+        if (scroll_now > $('.news').offset().top) {
+            if (!$('.news').hasClass('done')) {
+
+                for (let tar = 1; tar <= $('.news_pic').length; tar++) {
+                    setTimeout(function () {
+                        TweenMax.to('.news_pic[data-target="' + tar + '"]', 0.2, { css: { scale: 0.7, opacity: 1}, ease: Strong.easeInOut, yoyo: true, repeat: 1 });
+                        $('.news_pic[data-target="' + tar + '"]').css('opacity', 1);
+                    }, tar * 200);
+                }
+
+                $(".news").addClass('done');
+            }
+        } 
     })
 
 }))
