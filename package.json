@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "gsap": "^1.20.2",
     "jquery": "^3.2.1",
     "lazysizes": "^4.0.0-rc3",
     "popper.js": "^1.11.1"

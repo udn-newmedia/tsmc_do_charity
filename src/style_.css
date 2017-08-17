@@ -486,6 +486,28 @@ footer a {
     margin-top: 10px;
 }
 
+.member_anim {
+    position: relative;
+}
+
+#member01 {
+    opacity: 1;
+    will-change: opacity;
+    transition: opacity 1s;
+    transition-timing-function: linear;
+
+}
+
+#member02 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    will-change: opacity;
+    transition: opacity 1s;
+    transition-timing-function: linear;
+}
+
 @media screen and (max-width: 767px){
     .bg{
         padding-bottom: 10px;

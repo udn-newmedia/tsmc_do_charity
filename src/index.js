@@ -206,12 +206,22 @@ import { TweenMax, Power2, TimelineLite } from "gsap";
         }
 
         //deal with pop out animation
+        //想一下popout 這裡如何改
         if($('.popout').length){
             if(scroll_now > $('.popout').offset().top - 1/3*h){
                 TweenMax.to(".popout", 0.5, {css: {scale: 0.8, opacity: 1}, ease: Strong.easeInOut, yoyo: true, repeat: 1});
                 $('.popout').removeClass('popout');
             }
         }
+
+        if(scroll_now > $('.member_anim').offset().top - 1/5*h){
+            if(!$('.member_anim').hasClass('done')){
+                console.log('start')
+                $("#member01").css("opacity","0");
+                $("#member02").css("opacity", "1");     
+                $(".member_anim").addClass('done')           
+            }
+        } 
 
     })
 
