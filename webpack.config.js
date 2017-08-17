@@ -64,7 +64,7 @@ const config = {
                 use: {
                     loader: 'html-loader',
                     options: {
-                        attrs: [':data-src']
+                        attrs: [':src',':data-src',':srcset']
                     }
                 }
             }
