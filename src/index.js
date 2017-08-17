@@ -90,23 +90,23 @@ import { TweenMax, Power2, TimelineLite } from "gsap";
     var title = $('title').text()
 
     //cover page animation
-    //若小於16:9 調整山的高度
-    if(h/w>9/16){
-        $("#mountains").css("height","90%");
-    }
+    //山從下往上浮起來
+    // $("#mountains").css("bottom","0");
+    // $("#mountains").css("padding-bottom", "55%");
+
+    $("#mountains").css("height", "100%");
     $("#cover").css("opacity","1");
-    $("#mountains").css("bottom","0");
     $("#cover-title").css("opacity","1");
 
     setTimeout(function(){
         $("#flag").css("opacity","1");
-        $("#flag").css("padding-top", "5px");
+        $("#flag").css("padding-top", "10px");
     },1100);
 
     //for video operation
     $('video').on('waiting', function () {
         var tar = $(this).data('target')
-        $('.video-play[data-target="' + tar + '"]').css('opacity', 0);
+        $('.video-play[data-target="' + tar + '"]').css('opacity', 0)
         $('.fa-spinner[data-target="' + tar + '"]').css('opacity', 1)
         // console.log('wait' + $(this).data('target'))
     })
@@ -214,12 +214,26 @@ import { TweenMax, Power2, TimelineLite } from "gsap";
             }
         }
 
+        //text in member box pop out
+        if(scroll_now > $('.member_box').offset().top) {
+            if (!$('.member_box').hasClass('done')) {
+
+                for(let tar=1;tar<=$('.partner').length;tar++){
+                    setTimeout(function(){
+                        $('.partner[data-target="' + tar + '"]').css('opacity', 1);
+                    },tar*500);
+                }
+
+                $(".member_box").addClass('done');
+            }
+        } 
+
+        //member picture animation
         if(scroll_now > $('.member_anim').offset().top - 1/5*h){
             if(!$('.member_anim').hasClass('done')){
-                console.log('start')
                 $("#member01").css("opacity","0");
                 $("#member02").css("opacity", "1");     
-                $(".member_anim").addClass('done')           
+                $(".member_anim").addClass('done');           
             }
         } 
 
