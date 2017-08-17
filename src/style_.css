@@ -14,8 +14,8 @@ img{
 }
 
 #cover{
-    /*background-image: url(../assets/bg-03.svg);*/
     background-image: url(../assets/index-bg01.jpg);
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,7 +26,11 @@ img{
     transition-timing-function: linear;
 }
 
-
+@media screen and (max-width: 991px){
+    #cover{
+        background-image: url(../assets/index-bg01-mob.jpg);
+    }
+}
 
 #share-block-top{
     margin-top: 0;
@@ -46,6 +50,14 @@ img{
     transition: height 0.5s;
     transition-timing-function: cubic-bezier(.25,.05,.39,1.3);
 }
+
+@media screen and (max-width: 1199px){
+    #mountains{
+        background-image: url(../assets/index-bg02-mob.png);
+    }
+}
+
+
 
 /*
 //mountain從下往上浮起來
@@ -83,26 +95,52 @@ img{
 }*/
 
 #cover-title{
-    background-image: url(../assets/index-bg03.png);
     background-repeat: no-repeat;
     background-size: contain;
     will-change: opacity;
     transition: opacity 1s;
     transition-timing-function: linear;
     width: 40%;
-    height: 25%;
+    height: auto;
     opacity: 0;
 }
 
+@media screen and (max-width: 1199px){
+    #cover-title{
+        width: 80%;
+    }
+}
+
+
 #flag{
-    /*width: 3%;*/
     width: 5%;
     height: auto;
     transform: translateX(-30vh) translateY(-20vh);
     opacity: 0;
     will-change: padding-top;
-    transition: padding-top 0.3s;
+    transition: padding-top 0.1s;
     transition-timing-function: cubic-bezier(.25,.05,.39,1.3);
+}
+
+@media screen and (max-width: 1199px) and (min-width:991px){
+    #flag{
+        width: 10%;
+        transform: translateX(-15vh) translateY(28vh);
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width:768px){
+    #flag{
+        width: 10%;
+        transform: translateX(-5vh) translateY(20vh);
+    }
+}
+
+@media screen and (max-width: 767px){
+    #flag{
+        width: 10%;
+        transform: translateX(-5vh) translateY(15vh);
+    }
 }
 
 .popout{
@@ -225,6 +263,13 @@ footer a {
     margin: 10px 0px 65px 0px;
     text-align: center;
 }
+
+@media screen and (max-width: 1199px){
+    .member_box{
+        margin: 10px 0px 0px 0px;
+    }
+}
+
 .partner{
     display: inline-block; 
     font-size: 25px;

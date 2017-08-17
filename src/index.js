@@ -251,7 +251,7 @@ import { TweenMax, Power2, TimelineLite } from "gsap";
 
                 $(".news").addClass('done');
             }
-        } 
+        }
     })
 
 }))
