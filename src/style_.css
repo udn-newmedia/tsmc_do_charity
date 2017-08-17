@@ -15,7 +15,6 @@ img{
 
 #cover{
     /*background-image: url(../assets/bg-03.svg);*/
-    /*background-image: url(../assets/index1-01.svg);*/
     background-image: url(../assets/index-bg01.jpg);
     display: flex;
     flex-direction: column;
@@ -26,6 +25,8 @@ img{
     transition: opacity 0.5s;
     transition-timing-function: linear;
 }
+
+
 
 #share-block-top{
     margin-top: 0;
@@ -47,7 +48,7 @@ img{
 }
 
 /*
-//從下往上浮起來
+//mountain從下往上浮起來
 #mountains{
     position: absolute; 
     left: 0;
@@ -64,7 +65,7 @@ img{
 
 
 /*
-preserve picutre ratio
+//preserve picutre ratio
 #mountains{
     position: absolute; 
     left: 0;
@@ -97,7 +98,6 @@ preserve picutre ratio
     /*width: 3%;*/
     width: 5%;
     height: auto;
-    /*transform: translateX(-350%) translateY(-150%);*/
     transform: translateX(-30vh) translateY(-20vh);
     opacity: 0;
     will-change: padding-top;
@@ -534,9 +534,8 @@ footer a {
 #member01 {
     opacity: 1;
     will-change: opacity;
-    transition: opacity 1s;
-    transition-timing-function: linear;
-
+    transition: opacity 0.5s;
+    transition-timing-function: ease-out;
 }
 
 #member02 {
@@ -545,8 +544,8 @@ footer a {
     left: 0;
     opacity: 0;
     will-change: opacity;
-    transition: opacity 1s;
-    transition-timing-function: linear;
+    transition: opacity 0.5s;
+    transition-timing-function: ease-in;
 }
 
 @media screen and (max-width: 767px){

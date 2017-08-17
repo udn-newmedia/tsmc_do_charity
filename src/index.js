@@ -215,13 +215,14 @@ import { TweenMax, Power2, TimelineLite } from "gsap";
         }
 
         //text in member box pop out
-        if(scroll_now > $('.member_box').offset().top) {
+        if(scroll_now > $('.member').offset().top) {
             if (!$('.member_box').hasClass('done')) {
 
                 for(let tar=1;tar<=$('.partner').length;tar++){
                     setTimeout(function(){
                         $('.partner[data-target="' + tar + '"]').css('opacity', 1);
-                    },tar*500);
+                        TweenMax.to('.partner[data-target="' + tar + '"]', 0.2, { css: { scale: 0.8}, ease: Strong.easeInOut, yoyo: true, repeat: 1 });
+                    },tar*200);
                 }
 
                 $(".member_box").addClass('done');
@@ -229,7 +230,7 @@ import { TweenMax, Power2, TimelineLite } from "gsap";
         } 
 
         //member picture animation
-        if(scroll_now > $('.member_anim').offset().top - 1/5*h){
+        if(scroll_now > $('.member_box').offset().top){
             if(!$('.member_anim').hasClass('done')){
                 $("#member01").css("opacity","0");
                 $("#member02").css("opacity", "1");     
