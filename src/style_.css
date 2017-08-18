@@ -1,12 +1,6 @@
-/** {
-    border: solid 1px black;
-}*/
 
 html, body {
     background-color: #ffffff;
-    /*background-image: url(../assets/bg_point.png);
-    background-repeat: repeat;
-    overflow-x:hidden*/
 }
 
 img{
@@ -475,11 +469,21 @@ footer a {
     margin-top: 0;
 }
 
-@media screen and (max-width: 767px){
+.tsmc-logo{
+    width: 240px;
+    display: inline-block;
+}
+
+.udn-logo2{
+    width: 120px;
+    display: inline-block;    
+}
+
+/*@media screen and (max-width: 767px){
     .nmd-logo{
         float: right;
     }
-}
+}*/
 
 .fb-comment-block{
     margin-top: 50px;
