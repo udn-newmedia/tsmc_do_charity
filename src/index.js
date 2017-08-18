@@ -100,8 +100,8 @@ import { TweenMax, Power2, TimelineLite } from "gsap";
 
     setTimeout(function(){
         $("#flag").css("opacity","1");
-        $("#flag").css("padding-top", "10px");
-    },1100);
+        // $("#flag").css("padding-top", "10px");
+    },1000);
 
     //for video operation
     $('video').on('waiting', function () {
