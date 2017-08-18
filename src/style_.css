@@ -364,9 +364,7 @@ footer a {
     width: 71px;
     height: 85px;
 }
-.fb-posts{
-    margin: 5px;
-}
+
 .comment{
     background-color: #fff;
 }
@@ -483,19 +481,14 @@ footer a {
     width: initial;
 }
 
-.logo-block{
-    float: right;
-    padding-top: 30px;    
+.logo-block {
+    margin-top: 0;
 }
 
-.udn-logo{
-    width: 637px;
-    display: inline-block;
-}
-
-.nmd-logo{
-    width: 608px;
-    display: inline-block;
+@media screen and (max-width: 767px){
+    .nmd-logo{
+        float: right;
+    }
 }
 
 .fb-comment-block{
@@ -694,13 +687,6 @@ footer a {
         height: auto;
     }
 
-    .logo-block{
-        float: none;
-        clear: both;
-        margin-top: 50px;
-        margin-left: -8px;
-    }
-
     #report .col-sm-6{
         clear: both;
     }
@@ -843,3 +829,63 @@ footer a {
         margin-top: 30px;
     }
 }
+
+.fb_iframe_widget {
+    width: 1px!important;
+    max-width: 100%!important;
+    min-width: 100%!important;
+}
+
+.fb{
+    width: 600px;
+    margin: 0 auto;
+    display: block;
+}
+
+.fb-post iframe{
+    width: 600px!important;
+    background-color: white;
+    min-width: auto;
+}
+
+@media screen and (max-width: 374px){
+    .fb{
+        width: 320px!important;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .fb-post span{
+        width: 320px!important;
+    }            
+
+    .fb-post iframe{
+        width: 320px!important;
+    }            
+}
+
+
+@media screen and (min-width: 375px) and (max-width:767px){
+    .fb{
+        width: 350px!important;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .fb-post iframe{
+        width: 350px!important;
+    }            
+}
+
+@media screen and (min-width:1024px){
+    .fb{
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .fb-post iframe{
+        width: 100%!important;
+    }            
+}
+
