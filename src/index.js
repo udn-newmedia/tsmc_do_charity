@@ -5,6 +5,7 @@ import $ from 'jquery'
 import './style_.css'
 import 'lazysizes'
 import { TweenMax, Power2, TimelineLite } from "gsap";
+import './smartBrain2.js'
 
 ($(document).ready(function(){
 

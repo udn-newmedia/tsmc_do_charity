@@ -67,6 +67,11 @@ const config = {
                         attrs: [':src',':data-src',':srcset']
                     }
                 }
+            },
+            {
+                test: /\.json$/,
+
+                loader: ['json-loader']
             }
         ]
     },
