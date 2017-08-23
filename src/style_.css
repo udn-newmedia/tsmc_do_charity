@@ -108,6 +108,7 @@ img{
     width: 40%;
     height: auto;
     opacity: 0;
+    /*flex-grow: 4;*/
 }
 
 @media screen and (max-width: 1199px){
@@ -124,6 +125,27 @@ img{
     will-change: opacity;
     transition: padding-top 0.1s;
     transition-timing-function: cubic-bezier(.25,.05,.39,1.3);
+}
+
+ /*IE10+ */
+@media all and (-ms-high-contrast:none) , all and (-ms-high-contrast:active) {
+    #flag {
+        padding-top: 18%;
+    }
+}
+
+/* Microsoft Edge Browser 12,13 only - @supports method */
+@supports (-ms-accelerator:true) {
+    #flag {
+        padding-top: 18%;
+    }
+}
+
+/* Microsoft Edge Browser 12+ (All) - @supports method */
+@supports (-ms-ime-align:auto) {
+    #flag {
+        padding-top: 18%;
+    }
 }
 
 @media screen and (max-width: 1199px) and (min-width:991px){
@@ -146,6 +168,18 @@ img{
         transform: translateX(-5vh) translateY(15vh);
     }
 }
+
+
+
+/*#flag-padding-top-box {
+    flex-grow: 2;
+}
+
+#flag1 {
+    flex-grow: 3;
+    padding-left: 5%;
+    padding-right: 40%;
+}*/
 
 .popout{
     opacity: 0;
