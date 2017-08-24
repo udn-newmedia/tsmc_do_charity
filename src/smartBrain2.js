@@ -1,19 +1,18 @@
-import bodymovin from "bodymovin";
-import pic0 from "../assets/images/img_0.png";
-import pic1 from "../assets/images/img_1.png";
-import pic2 from "../assets/images/img_2.png";
-import pic3 from "../assets/images/img_3.png";
-import pic4 from "../assets/images/img_4.png";
-import pic5 from "../assets/images/img_5.png";
-import pic6 from "../assets/images/img_6.png";
-import pic7 from "../assets/images/img_7.png";
-import pic8 from "../assets/images/img_8.png";
-import pic9 from "../assets/images/img_9.png";
-import data from "../assets/data.json";
+import $ from "jquery";
+// import bodymovin from "bodymovin";
+import pic0 from "../assets/smartBrain2/images/img_0.png";
+import pic1 from "../assets/smartBrain2/images/img_1.png";
+import pic2 from "../assets/smartBrain2/images/img_2.png";
+import pic3 from "../assets/smartBrain2/images/img_3.png";
+import pic4 from "../assets/smartBrain2/images/img_4.png";
+import pic5 from "../assets/smartBrain2/images/img_5.png";
+import pic6 from "../assets/smartBrain2/images/img_6.png";
+import pic7 from "../assets/smartBrain2/images/img_7.png";
+import data from "../assets/smartBrain2/data.json";
 
 //changes the path
 
-for(let i=0;i<=9;i++){
+for(let i=0;i<=7;i++){
 
     data.assets[i].u = './';
     
@@ -55,8 +54,21 @@ for(let i=0;i<=9;i++){
 var animation = bodymovin.loadAnimation({
   container: document.getElementById("bodymovin"),
   renderer: "svg",
-  loop: true,
-  autoplay: true,
+  loop: false,
+  autoplay: false,
   animationData: data
   // path: './data.json'
+});
+
+$(document).ready(function() {
+  let h = $(window).height();
+  var scroll_now;
+
+  $(window).on("scroll", function() {
+    scroll_now = $(window).scrollTop();
+    let smartBrainContainer_play = scroll_now - $("#smartBrainContainer").offset().top + h;
+    if(smartBrainContainer_play > h/3){
+      animation.play();
+    }
+  });
 });

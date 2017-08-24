@@ -913,12 +913,11 @@ footer a {
     }            
 }
 
+#smartBrainContainer {
+    position: relative;
+}
 
-/*bodymovin*/
-#bodymovin {
-  /*width: 100%;
-  height:100%;
-  overflow: hidden;
-  cursor: pointer;*/
-  height: 800px;
+#bodymovin2 {
+    position: absolute;
+    top: 0;
 }
