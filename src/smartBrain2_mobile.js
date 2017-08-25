@@ -1,14 +1,14 @@
 import $ from "jquery";
 // import bodymovin from "bodymovin";
-import pic0 from "../assets/smartBrain2/images/img_0.png";
-import pic1 from "../assets/smartBrain2/images/img_1.png";
-import pic2 from "../assets/smartBrain2/images/img_2.png";
-import pic3 from "../assets/smartBrain2/images/img_3.png";
-import pic4 from "../assets/smartBrain2/images/img_4.png";
-import pic5 from "../assets/smartBrain2/images/img_5.png";
-import pic6 from "../assets/smartBrain2/images/img_6.png";
-import pic7 from "../assets/smartBrain2/images/img_7.png";
-import data from "../assets/smartBrain2/data.json";
+import pic0 from "../assets/smartBrain2_mobile/images/img_0.png";
+import pic1 from "../assets/smartBrain2_mobile/images/img_1.png";
+import pic2 from "../assets/smartBrain2_mobile/images/img_2.png";
+import pic3 from "../assets/smartBrain2_mobile/images/img_3.png";
+import pic4 from "../assets/smartBrain2_mobile/images/img_4.png";
+import pic5 from "../assets/smartBrain2_mobile/images/img_5.png";
+import pic6 from "../assets/smartBrain2_mobile/images/img_6.png";
+import pic7 from "../assets/smartBrain2_mobile/images/img_7.png";
+import data from "../assets/smartBrain2_mobile/data.json";
 import detectmob from "./detectmob.js";
 
 //changes the path
@@ -52,13 +52,15 @@ for(let i=0;i<=7;i++){
 
 }
 
-var isDesktop = !detectmob();
+var isMob = detectmob();
 
-if(isDesktop){
+if(isMob){
 
   let tar = 2;
 
-  $('.fa-spinner[data-target="' + tar + '"]').css("opacity", 1);
+  // $('.fa-spinner[data-target="' + tar + '"]').css("opacity", 1);
+
+  $("#bm-loading").css("opacity",1);
 
   var animation = bodymovin.loadAnimation({
     container: document.getElementById("bodymovin"),
@@ -70,9 +72,9 @@ if(isDesktop){
   });
 
   animation.addEventListener("DOMLoaded", function() {
-    $('.fa-spinner[data-target="' + tar + '"]').css("opacity", 0);
+    // $('.fa-spinner[data-target="' + tar + '"]').css("opacity", 0);
+    $("#bm-loading").css("opacity", 0);
   });
-
 
   $(document).ready(function() {
     let h = $(window).height();

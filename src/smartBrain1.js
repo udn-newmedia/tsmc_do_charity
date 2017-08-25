@@ -3,6 +3,7 @@ import $ from "jquery";
 import pic0 from "../assets/smartBrain1/images/img_0.png";
 import pic1 from "../assets/smartBrain1/images/img_1.png";
 import data from "../assets/smartBrain1/data.json";
+import detectmob from "./detectmob.js";
 
 //changes the path
 
@@ -43,26 +44,31 @@ for (let i = 0; i <= 1; i++) {
   }
 }
 
+var isDesktop = !detectmob();
 
-var animation = bodymovin.loadAnimation({
-  container: document.getElementById("bodymovin2"),
-  renderer: "svg",
-  loop: true,
-  autoplay: false,
-  animationData: data
-  // path: './data.json'
-});
+if(isDesktop){
 
-$(document).ready(function() {
-
-  let h = $(window).height();
-  var scroll_now;
-
-  $(window).on("scroll", function() {
-    scroll_now = $(window).scrollTop();
-    let smartBrainContainer_play = scroll_now - $("#smartBrainContainer").offset().top + h;
-    if (smartBrainContainer_play > h / 3) {
-      animation.play();
-    }
+  var animation = bodymovin.loadAnimation({
+    container: document.getElementById("bodymovin2"),
+    renderer: "svg",
+    loop: true,
+    autoplay: false,
+    animationData: data
+    // path: './data.json'
   });
-});
+
+  $(document).ready(function() {
+
+    let h = $(window).height();
+    var scroll_now;
+
+    $(window).on("scroll", function() {
+      scroll_now = $(window).scrollTop();
+      let smartBrainContainer_play = scroll_now - $("#smartBrainContainer").offset().top + h;
+      if (smartBrainContainer_play > h / 3) {
+        animation.play();
+      }
+    });
+  });
+}
+
